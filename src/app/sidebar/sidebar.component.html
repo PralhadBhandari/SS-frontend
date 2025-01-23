@@ -1,0 +1,119 @@
+<!-- sidebar.component.html -->
+<!-- Mobile Menu Button - Always visible on mobile -->
+<button 
+  (click)="toggleSidebar()" 
+  class="lg:hidden fixed top-4 left-4 z-50 p-2 rounded-lg bg-white shadow-md"
+  aria-label="Toggle menu">
+  <svg 
+    xmlns="http://www.w3.org/2000/svg" 
+    class="h-6 w-6 text-gray-600" 
+    fill="none" 
+    viewBox="0 0 24 24" 
+    stroke="currentColor">
+    <path 
+      *ngIf="!isSidebarOpen" 
+      stroke-linecap="round" 
+      stroke-linejoin="round" 
+      stroke-width="2" 
+      d="M4 6h16M4 12h16M4 18h16"/>
+    <path 
+      *ngIf="isSidebarOpen" 
+      stroke-linecap="round" 
+      stroke-linejoin="round" 
+      stroke-width="2" 
+      d="M6 18L18 6M6 6l12 12"/>
+  </svg>
+</button>
+
+<!-- Overlay for mobile -->
+<div 
+  *ngIf="isSidebarOpen" 
+  (click)="toggleSidebar()"
+  class="lg:hidden fixed inset-0 bg-black bg-opacity-50 z-40 transition-opacity"
+  aria-hidden="true">
+</div>
+
+<!-- Sidebar -->
+<aside 
+  [class.translate-x-0]="isSidebarOpen"
+  [class.translate-x-[-100%]]="!isSidebarOpen"
+  class="fixed left-0 top-0 h-screen w-[280px] lg:w-64 bg-white shadow-lg z-50 
+         lg:translate-x-0 transition-transform duration-300 ease-in-out">
+  
+  <!-- Header -->
+  <div class="p-4 border-b">
+    <div class="flex items-center space-x-2">
+      <div class="text-2xl font-bold text-blue-600">🚧</div>
+      <div class="text-xl font-semibold">StreetSnap</div>
+    </div>
+  </div>
+  
+  <!-- Navigation Menu -->
+  <nav class="mt-4 flex flex-col h-[calc(100vh-80px)] overflow-y-auto">
+    <div class="flex-1">
+      <a 
+        routerLink="/explore-feed" 
+        routerLinkActive="bg-blue-50 text-blue-600" 
+        class="flex items-center px-4 py-3 text-gray-600 hover:bg-blue-50 transition-colors"
+        (click)="onMobileItemClick()">
+        <span class="mr-3 text-xl sm:text-base">🌐</span>
+        <span class="text-sm sm:text-base">Explore</span>
+      </a>
+      
+      <a 
+        routerLink="/create-post" 
+        routerLinkActive="bg-blue-50 text-blue-600" 
+        class="flex items-center px-4 py-3 text-gray-600 hover:bg-blue-50 transition-colors"
+        (click)="onMobileItemClick()">
+        <span class="mr-3 text-xl sm:text-base">➕</span>
+        <span class="text-sm sm:text-base">Create Post</span>
+      </a>
+      
+      <a 
+        routerLink="/search-by-post" 
+        routerLinkActive="bg-blue-50 text-blue-600" 
+        class="flex items-center px-4 py-3 text-gray-600 hover:bg-blue-50 transition-colors"
+        (click)="onMobileItemClick()">
+        <span class="mr-3 text-xl sm:text-base">📱</span>
+        <span class="text-sm sm:text-base">Search By Post</span>
+      </a>
+      
+      <a 
+        routerLink="/search-by-location" 
+        routerLinkActive="bg-blue-50 text-blue-600" 
+        class="flex items-center px-4 py-3 text-gray-600 hover:bg-blue-50 transition-colors"
+        (click)="onMobileItemClick()">
+        <span class="mr-3 text-xl sm:text-base">🗺️</span>
+        <span class="text-sm sm:text-base">Search By Coordinates</span>
+      </a>
+      
+      <!-- <a 
+        routerLink="/edit-profile" 
+        routerLinkActive="bg-blue-50 text-blue-600" 
+        class="flex items-center px-4 py-3 text-gray-600 hover:bg-blue-50 transition-colors"
+        (click)="onMobileItemClick()">
+        <span class="mr-3 text-xl sm:text-base">👤</span>
+        <span class="text-sm sm:text-base">My Profile</span>
+      </a> -->
+      
+      <a 
+        routerLink="/dashboard" 
+        routerLinkActive="bg-blue-50 text-blue-600" 
+        class="flex items-center px-4 py-3 text-gray-600 hover:bg-blue-50 transition-colors"
+        (click)="onMobileItemClick()">
+        <span class="mr-3 text-xl sm:text-base">📊</span>
+        <span class="text-sm sm:text-base">Dashboard</span>
+      </a>
+    </div>
+    
+    <!-- Logout button at bottom -->
+    <div class="border-t p-4">
+      <button 
+        (click)="logout()" 
+        class="flex items-center w-full px-4 py-3 text-gray-600 hover:bg-blue-50 transition-colors rounded-lg">
+        <span class="mr-3 text-xl sm:text-base">↩️</span>
+        <span class="text-sm sm:text-base">Logout</span>
+      </button>
+    </div>
+  </nav>
+</aside>
