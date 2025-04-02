@@ -12,7 +12,21 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
   
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-  <!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB9SsOl9t9BEqJunSuhf093R8XTOXhzvCs&libraries=places&callback=initMap" async defer></script> -->
+  <!-- <script src="https://maps.googleapis.com/maps/api/js?key=GOOGLE_MAP_API_KEY&libraries=places&callback=initMap" async defer></script> -->
+  <script>
+    fetch('/assets/environment.json')
+      .then(response => response.json())
+      .then(env => {
+        const script = document.createElement('script');
+        script.src = `https://maps.googleapis.com/maps/api/js?key=${env.GOOGLE_MAPS_API_KEY}`;
+        script.async = true;  // Set async if needed
+        script.defer = true;  // Set defer if needed
+        document.head.appendChild(script);
+      })
+      .catch(error => console.error("Failed to load Google Maps API", error));
+  </script>
+  
+  
 </head>
 <body>
   <app-root></app-root>
