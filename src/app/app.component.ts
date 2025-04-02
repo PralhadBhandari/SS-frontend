@@ -2,9 +2,9 @@ import { Component, ElementRef, ViewChild } from '@angular/core';
 import { Router, RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { RegisterUserComponent } from "./modules/user/register-user/register-user.component";
-import { HomeComponent } from './home/home.component';
-import { MapCircleComponent } from "./map-circle/map-circle.component";
-import { ExploreFeedComponent } from "./explore-feed/explore-feed.component";
+// import { HomeComponent } from './home/home.component';
+// import { MapCircleComponent } from "./map-circle/map-circle.component";
+// import { ExploreFeedComponent } from "./explore-feed/explore-feed.component";
 
 @Component({
   selector: 'app-root',

@@ -1,9 +1,11 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
-import { CommonService } from '../services/common.service';
+// import { CommonService } from '../services/common.service';
 import { ActivatedRoute, Router } from '@angular/router';
-import { ProfilesService } from '../services/profiles.service';
+import { CommonService } from '../../services/common.service';
+import { ProfilesService } from '../../services/profiles.service';
+// import { ProfilesService } from '../services/profiles.service';
 
 @Component({
   selector: 'app-edit-profile',

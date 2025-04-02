@@ -1,6 +1,7 @@
 import { Component, ElementRef } from '@angular/core';
 import { GoogleMapsModule } from '@angular/google-maps';
-import { CommonService } from '../services/common.service';
+import { CommonService } from '../../services/common.service';
+// import { CommonService } from '../services/common.service';
 
 @Component({
   selector: 'app-generate-map',

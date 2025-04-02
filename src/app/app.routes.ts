@@ -1,18 +1,25 @@
 import { Routes } from '@angular/router';
-import { HomeComponent } from './home/home.component';
+// import { HomeComponent } from './home/home.component';
 import { RegisterUserComponent } from './modules/user/register-user/register-user.component';
 import { LoginUserComponent } from './modules/user/login-user/login-user.component';
-import { GoogleMapComponent } from './google-map/google-map.component';
-import { GenerateMapComponent } from './generate-map/generate-map.component';
-import { EditProfileComponent } from './edit-profile/edit-profile.component';
+// import { GoogleMapComponent } from './google-map/google-map.component';
+// import { GenerateMapComponent } from './generate-map/generate-map.component';
+// import { EditProfileComponent } from './edit-profile/edit-profile.component';
 import { SearchByLocationComponent } from './search-by-location/search-by-location.component';
 import { SearchByPostComponent } from './search-by-post/search-by-post.component';
 import { authGuard } from './auth.guard';
-import { CreatePostNewComponent } from './create-post-new/create-post-new.component';
+// import { CreatePostNewComponent } from './create-post-new/create-post-new.component';
 import { UserDashboardComponent } from './user-dashboard/user-dashboard.component';
-import { ExploreFeedComponent } from './explore-feed/explore-feed.component';
-import { ForgotPasswordComponent } from './forgot-password/forgot-password.component';
+// import { ExploreFeedComponent } from './explore-feed/explore-feed.component';
+// import { ForgotPasswordComponent } from './forgot-password/forgot-password.component';
 import { ResetPasswordComponent } from './reset-password/reset-password.component';
+import { ForgotPasswordComponent } from './components/forgot-password/forgot-password.component';
+import { HomeComponent } from './components/home/home.component';
+import { ExploreFeedComponent } from './components/explore-feed/explore-feed.component';
+import { GoogleMapComponent } from './components/google-map/google-map.component';
+import { GenerateMapComponent } from './components/generate-map/generate-map.component';
+import { EditProfileComponent } from './components/edit-profile/edit-profile.component';
+import { CreatePostNewComponent } from './components/create-post-new/create-post-new.component';
 
 export const routes: Routes = [
   // Public routes

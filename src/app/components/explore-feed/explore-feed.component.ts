@@ -1,13 +1,18 @@
 import { Component, HostListener, ElementRef, OnInit, ViewChild } from '@angular/core';
-import { PostsService } from '../services/posts.service';
-import { ProfilesService } from '../services/profiles.service';
+// import { PostsService } from '../services/posts.service';
+// import { ProfilesService } from '../services/profiles.service';
 import { Router } from '@angular/router';
-import { CommonService } from '../services/common.service';
+// import { CommonService } from '../services/common.service';
 import { forkJoin } from 'rxjs';
 import { FormsModule } from '@angular/forms';
-import { CommentsService } from '../services/comments.service';
+// import { CommentsService } from '../services/comments.service';
 import { CommonModule } from '@angular/common';
-import { RepliesService } from '../services/replies.service';
+import { PostsService } from '../../services/posts.service';
+import { ProfilesService } from '../../services/profiles.service';
+import { CommonService } from '../../services/common.service';
+import { CommentsService } from '../../services/comments.service';
+import { RepliesService } from '../../services/replies.service';
+// import { RepliesService } from '../services/replies.service';
 
 @Component({
   selector: 'app-explore-feed',

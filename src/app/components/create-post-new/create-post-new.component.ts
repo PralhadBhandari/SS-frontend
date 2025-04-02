@@ -2,9 +2,11 @@ import { CommonModule } from '@angular/common';
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { FormBuilder, FormGroup, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
 import { Subscription } from 'rxjs';
-import { CommonService } from '../services/common.service';
-import { PostsService } from '../services/posts.service';
+// import { CommonService } from '../services/common.service';
+// import { PostsService } from '../services/posts.service';
 import { ActivatedRoute, Router } from '@angular/router';
+import { CommonService } from '../../services/common.service';
+import { PostsService } from '../../services/posts.service';
 
 @Component({
   selector: 'app-create-post-new',
